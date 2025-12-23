@@ -29,8 +29,8 @@ export default function Map({ center, zoom, onBoundarySave, users, boundaries }:
   const mapRef = useRef<L.Map | null>(null);
   const mapContainerRef = useRef<HTMLDivElement>(null);
   const drawnItemsRef = useRef<L.FeatureGroup | null>(null);
-  const userMarkersRef = useRef<Map<string, L.Marker>>(new Map());
-  const boundaryLayersRef = useRef<Map<string, L.Polygon>>(new Map());
+  const userMarkersRef = useRef<globalThis.Map<string, L.Marker>>(new globalThis.Map());
+  const boundaryLayersRef = useRef<globalThis.Map<string, L.Polygon>>(new globalThis.Map());
   const [isDrawing, setIsDrawing] = useState(false);
 
   // Initialize map
